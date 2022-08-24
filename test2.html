@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버불링실험</title>
+    <style>
+        * {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $('h1').click(function () {
+                $(this).css('background','blue');
+            });
+            $('a').click(function (event) {
+                event.stopPropagation();
+                $(this).css('background','red');
+            })
+        });
+    </script>
+</head>
+<body>
+    <h1>
+        <a href="#">나를 클릭해보세요</a>
+    </h1>
+</body>
+</html>
